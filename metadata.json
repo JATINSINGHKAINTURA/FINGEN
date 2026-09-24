@@ -1,0 +1,6 @@
+{
+  "name": "Pulse AI - Gen Z & Creator Financial Operating System",
+  "description": "Smart financial operating system with dynamic income buffering, doomspend impulse shield, squad vaults, credit elevator, and conversational AI coach.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

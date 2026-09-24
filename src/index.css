@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #f2ca50;
+  --brand-primary-rgb: 242, 202, 80;
+  --brand-secondary: #efe0cd;
+  --brand-secondary-rgb: 239, 224, 205;
+  --brand-background: #171211;
+  --brand-background-rgb: 23, 18, 17;
+  --brand-surface: #201a19;
+  --brand-surface-rgb: 32, 26, 25;
+  --brand-text: #ebe0de;
+  --brand-accent: #713035;
+  --brand-accent-rgb: 113, 48, 53;
+  --brand-border: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--brand-background);
+    color: var(--brand-text);
+    overscroll-behavior: none;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  .font-serif, .font-display, .font-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Material Symbols configuration */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury Bespoke Theme Utility Classes mapped to CSS Variables */
+.bg-surface { background-color: var(--brand-background); }
+.bg-surface-container-lowest { background-color: rgba(var(--brand-background-rgb), 0.85); }
+.bg-surface-container-low { background-color: var(--brand-surface); }
+.bg-surface-container { background-color: rgba(var(--brand-surface-rgb), 0.9); }
+.bg-surface-container-high { background-color: rgba(255, 255, 255, 0.04); }
+.bg-surface-container-highest { background-color: rgba(255, 255, 255, 0.08); }
+
+.text-primary-gold { color: var(--brand-primary); }
+.text-secondary-cream { color: var(--brand-secondary); }
+.text-secondary-dim { color: var(--brand-secondary); opacity: 0.8; }
+.text-on-surface-custom { color: var(--brand-text); }
+.text-on-surface-muted { color: var(--brand-text); opacity: 0.7; }
+.text-outline-custom { color: var(--brand-secondary); opacity: 0.6; }
+.bg-tertiary-oxblood { background-color: var(--brand-accent); }
+.bg-tertiary-deep { background-color: rgba(var(--brand-accent-rgb), 0.75); }
+
+/* 3D Perspective & Floating Framer Styles */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Dynamic Brand Glows & Shadows */
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(var(--brand-primary-rgb), 0.25);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 12px 48px -8px rgba(var(--brand-primary-rgb), 0.35);
+}
+
+.luxury-card-shadow {
+  box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.85);
+}
+
+.luxury-card-elevated {
+  box-shadow: 0 32px 80px -15px rgba(0, 0, 0, 0.95);
+}
+
+/* Floating animation */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-0.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
